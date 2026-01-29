@@ -1,0 +1,489 @@
+<% if user_signed_in? %> 
+<head>
+    <script>
+        function showAboutUser(){
+            console.log("_____________hhhhhhhhhhhhhhhh____________")
+            const show_data=document.getElementById("show_user_data");
+            if(show_data.style.display=="none"){
+            console.log("_________________test disappearence of div__________________")
+            show_data.style.display="block"; 
+            }
+            else
+            {
+            console.log("/////////////hhhhhhhhhh\\\\\\\\\\");
+            show_data.style.display="none"; 
+            }
+            console.log("..................",show_data);
+        }
+       /* function showHomeColor()
+        {
+            console.log("----homechangecolordiv----")
+            const show_border=document.getElementById("show_border_home");
+            console.log("::::::::::",show_border)
+            show_border.style.backgroundColor="bg-[rgb(8,102,255)]"
+        }*/
+    </script>
+</head>
+<body class="">
+<div class="w-full flex h-15 bg-[rgb(255,255,255)] ">
+    <div>
+        <div class="w-94 h-15 bg-[rgb(255,255,255)] flex justify-end items-center">
+            <div class="flex h-10 w-90 justify-around">
+                <a href="http://127.0.0.1:3000/">
+                <div class="w-10 h-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 40 40" class="w-10 h-10">
+                    <linearGradient id="a" x1="-277.375" x2="-277.375" y1="406.6018" y2="407.5726" gradientTransform="matrix(40 0 0 -39.7778 11115.001 16212.334)" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#0062e0"/>
+                    <stop offset="1" stop-color="#19afff"/>
+                    </linearGradient>
+                    <path fill="url(#a)" d="M16.7 39.8C7.2 38.1 0 29.9 0 20 0 9 9 0 20 0s20 9 20 20c0 9.9-7.2 18.1-16.7 19.8l-1.1-.9h-4.4l-1.1.9z"/>
+                    <path fill="#fff" d="m27.8 25.6.9-5.6h-5.3v-3.9c0-1.6.6-2.8 3-2.8H29V8.2c-1.4-.2-3-.4-4.4-.4-4.6 0-7.8 2.8-7.8 7.8V20h-5v5.6h5v14.1c1.1.2 2.2.3 3.3.3 1.1 0 2.2-.1 3.3-.3V25.6h4.4z"/>
+                    </svg>
+                </div>
+                </a>
+                <div class="w-75 h-10 bg-[rgb(255,255,255)] relative">
+                    <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="absolute top-3 left-2 xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--secondary-icon);"><g fill-rule="evenodd" transform="translate(-448 -544)"><g fill-rule="nonzero"><path d="M10.743 2.257a6 6 0 1 1-8.485 8.486 6 6 0 0 1 8.485-8.486zm-1.06 1.06a4.5 4.5 0 1 0-6.365 6.364 4.5 4.5 0 0 0 6.364-6.363z" transform="translate(448 544)"></path><path d="M10.39 8.75a2.94 2.94 0 0 0-.199.432c-.155.417-.23.849-.172 1.284.055.415.232.794.54 1.103a.75.75 0 0 0 1.112-1.004l-.051-.057a.39.39 0 0 1-.114-.24c-.021-.155.014-.356.09-.563.031-.081.06-.145.08-.182l.012-.022a.75.75 0 1 0-1.299-.752z" transform="translate(448 544)"></path><path d="M9.557 11.659c.038-.018.09-.04.15-.064.207-.077.408-.112.562-.092.08.01.143.034.198.077l.041.036a.75.75 0 0 0 1.06-1.06 1.881 1.881 0 0 0-1.103-.54c-.435-.058-.867.018-1.284.175-.189.07-.336.143-.433.2a.75.75 0 0 0 .624 1.356l.066-.027.12-.061z" transform="translate(448 544)"></path><path d="m13.463 15.142-.04-.044-3.574-4.192c-.599-.703.355-1.656 1.058-1.057l4.191 3.574.044.04c.058.059.122.137.182.24.249.425.249.96-.154 1.41l-.057.057c-.45.403-.986.403-1.411.154a1.182 1.182 0 0 1-.24-.182zm.617-.616.444-.444a.31.31 0 0 0-.063-.052c-.093-.055-.263-.055-.35.024l.208.232.207-.206.006.007-.22.257-.026-.024.033-.034.025.027-.257.22-.007-.007zm-.027-.415c-.078.088-.078.257-.023.35a.31.31 0 0 0 .051.063l.205-.204-.233-.209z" transform="translate(448 544)"></path></g></g></svg>
+                    <input class="w-75 h-10 rounded-full bg-[rgb(240,242,245)] pl-7 outline-none" placeholder="Search Facebook"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-180 h-15 bg-[rgb(255,255,255)] flex items-center justify-end">
+        <div class="flex h-13 w-140 justify-around "> 
+            <a href="http://127.0.0.1:3000/" onclick="">
+                <div class="w-25 h-15" onclick="">
+                    <div class="w-25 h-13 flex items-center justify-center hover:bg-[rgb(242,242,242)] rounded-md">
+                        <div class="w-6 h-6" id="housedivheader">
+                            <svg viewBox="0 0 24 24" style="color:[rgb(8,102,255)]"  class="" width="24" height="24" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--secondary-icon);"><path d="M8.99 23H7.93c-1.354 0-2.471 0-3.355-.119-.928-.125-1.747-.396-2.403-1.053-.656-.656-.928-1.475-1.053-2.403C1 18.541 1 17.425 1 16.07v-4.3c0-1.738-.002-2.947.528-4.006.53-1.06 1.497-1.784 2.888-2.826L6.65 3.263c1.114-.835 2.02-1.515 2.815-1.977C10.294.803 11.092.5 12 .5c.908 0 1.707.303 2.537.786.795.462 1.7 1.142 2.815 1.977l2.232 1.675c1.391 1.042 2.359 1.766 2.888 2.826.53 1.059.53 2.268.528 4.006v4.3c0 1.355 0 2.471-.119 3.355-.124.928-.396 1.747-1.052 2.403-.657.657-1.476.928-2.404 1.053-.884.119-2 .119-3.354.119H8.99zM7.8 4.9l-2 1.5C4.15 7.638 3.61 8.074 3.317 8.658 3.025 9.242 3 9.937 3 12v4c0 1.442.002 2.424.101 3.159.095.706.262 1.033.485 1.255.223.223.55.39 1.256.485.734.099 1.716.1 3.158.1V14.5a2.5 2.5 0 0 1 2.5-2.5h3a2.5 2.5 0 0 1 2.5 2.5V21c1.443 0 2.424-.002 3.159-.101.706-.095 1.033-.262 1.255-.485.223-.222.39-.55.485-1.256.099-.734.101-1.716.101-3.158v-4c0-2.063-.025-2.758-.317-3.342-.291-.584-.832-1.02-2.483-2.258l-2-1.5c-1.174-.881-1.987-1.489-2.67-1.886C12.87 2.63 12.425 2.5 12 2.5c-.425 0-.87.13-1.53.514-.682.397-1.495 1.005-2.67 1.886zM14 21v-6.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V21h4z"></path>
+                            </svg>
+                        </div>
+                         <div class="w-6 h-6" id="showcolorfullhouse" style="display:none">
+                            <svg viewBox="0 0 24 24" style="color: blue" class="color-[rgb(8,102,255)]"width="24" height="24" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--primary-button-background);"><path d="M9.464 1.286C10.294.803 11.092.5 12 .5c.908 0 1.707.303 2.537.786.795.462 1.7 1.142 2.815 1.977l2.232 1.675c1.391 1.042 2.359 1.766 2.888 2.826.53 1.059.53 2.268.528 4.006v4.3c0 1.355 0 2.471-.119 3.355-.124.928-.396 1.747-1.052 2.403-.657.657-1.476.928-2.404 1.053-.884.119-2 .119-3.354.119H7.93c-1.354 0-2.471 0-3.355-.119-.928-.125-1.747-.396-2.403-1.053-.656-.656-.928-1.475-1.053-2.403C1 18.541 1 17.425 1 16.07v-4.3c0-1.738-.002-2.947.528-4.006.53-1.06 1.497-1.784 2.888-2.826L6.65 3.263c1.114-.835 2.02-1.515 2.815-1.977zM10.5 13A1.5 1.5 0 0 0 9 14.5V21h6v-6.5a1.5 1.5 0 0 0-1.5-1.5h-3z"></path></svg>
+                        </div>
+                    </div>
+                    <div  id="show_border_home" style="display:none" class="bg-[rgb(8,102,255)] w-25 h-1">
+                    </div>
+                </div>
+            </a>
+            <a href="http://127.0.0.1:3000/people">
+                <div class="w-25 h-15">
+                    <div class="w-25 h-13 flex items-center justify-center hover:bg-[rgb(242,242,242)] rounded-md" onclick="">
+                        <div id="peopledivisiondiv" class="w-6 h-6 ">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--secondary-icon);"><path d="M12.496 5a4 4 0 1 1 8 0 4 4 0 0 1-8 0zm4-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-9 2.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm-2 4a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 15a5 5 0 0 0-5 5 3 3 0 0 0 3 3h8.006a3 3 0 0 0 3-3 5 5 0 0 0-5-5H5.5zm-3 5a3 3 0 0 1 3-3h4.006a3 3 0 0 1 3 3 1 1 0 0 1-1 1H3.5a1 1 0 0 1-1-1zm12-9.5a5.04 5.04 0 0 0-.37.014 1 1 0 0 0 .146 1.994c.074-.005.149-.008.224-.008h4.006a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-3.398a1 1 0 1 0 0 2h3.398a3 3 0 0 0 3-3 5 5 0 0 0-5-5H14.5z"></path></svg>
+                        </div>
+                        <div  id="peoplediv" style="display:none" class="w-6 h-6">
+                            <svg viewBox="0 0 24 24" style="color:blue" id="" width="24" height="24" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--primary-button-background);"><path d="M16.496 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm-9 4.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM5.5 15a5 5 0 0 0-5 5 3 3 0 0 0 3 3h8.006a3 3 0 0 0 3-3 5 5 0 0 0-5-5H5.5zm9-4.5c-.671 0-1.158.46-1.333.966a5.948 5.948 0 0 1-.303.718 1.558 1.558 0 0 0 .525 1.99 7.026 7.026 0 0 1 2.663 3.34c.215.565.76.986 1.418.986h3.036a3 3 0 0 0 3-3 5 5 0 0 0-5-5H14.5z"></path></svg>
+                        </div>
+                    </div>
+                    <div id="Footerpeoplediv" style="display:none" class="bg-[rgb(8,102,255)] w-25 h-1">
+                    </div>
+                </div>
+                <script>
+
+                    function showHeaderdiv(){
+                        if(window.location.href=="http://127.0.0.1:3000/people/peopleview"){
+                            let showpeopledivcolor=document.getElementById("Footerpeoplediv");
+                            console.log(showpeopledivcolor,",,,,,,,,,,,,,")
+                            showpeopledivcolor.style.display="block";
+                        }
+               
+                     }
+                </script>
+            </a>
+            <a href="http://127.0.0.1:3000/videopage">
+                <div class="w-25 h-15" onclick="">
+                    <div class="w-25 h-13 hover:bg-[rgb(242,242,242)] flex items-center justify-center rounded-md">
+                        <div class="w-6 h-6" id="videodiv">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--secondary-icon);"><path d="M10.996 8.132A1 1 0 0 0 9.5 9v4a1 1 0 0 0 1.496.868l3.5-2a1 1 0 0 0 0-1.736l-3.5-2z"></path><path d="M14.573 2H9.427c-1.824 0-3.293 0-4.45.155-1.2.162-2.21.507-3.013 1.31C1.162 4.266.817 5.277.655 6.477.5 7.634.5 9.103.5 10.927v.146c0 1.824 0 3.293.155 4.45.162 1.2.507 2.21 1.31 3.012.802.803 1.813 1.148 3.013 1.31C6.134 20 7.603 20 9.427 20h5.146c1.824 0 3.293 0 4.45-.155 1.2-.162 2.21-.507 3.012-1.31.803-.802 1.148-1.813 1.31-3.013.155-1.156.155-2.625.155-4.449v-.146c0-1.824 0-3.293-.155-4.45-.162-1.2-.507-2.21-1.31-3.013-.802-.802-1.813-1.147-3.013-1.309C17.866 2 16.397 2 14.573 2zM3.38 4.879c.369-.37.887-.61 1.865-.741C6.251 4.002 7.586 4 9.5 4h5c1.914 0 3.249.002 4.256.138.978.131 1.496.372 1.865.74.37.37.61.888.742 1.866.135 1.007.137 2.342.137 4.256 0 1.914-.002 3.249-.137 4.256-.132.978-.373 1.496-.742 1.865-.369.37-.887.61-1.865.742-1.007.135-2.342.137-4.256.137h-5c-1.914 0-3.249-.002-4.256-.137-.978-.132-1.496-.373-1.865-.742-.37-.369-.61-.887-.741-1.865C2.502 14.249 2.5 12.914 2.5 11c0-1.914.002-3.249.138-4.256.131-.978.372-1.496.74-1.865zM8 21.5a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2H8z"></path></svg>
+                        </div>
+                        <div  id="videobluediv" style="display:none" class="w-6 h-6">
+                            <svg viewBox="0 0 24 24" style="color:blue" width="24" height="24" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--primary-button-background);"><path d="M14.573 2H9.427c-1.824 0-3.293 0-4.45.155-1.2.162-2.21.507-3.013 1.31C1.162 4.266.817 5.277.655 6.477.5 7.634.5 9.103.5 10.927v.146c0 1.824 0 3.293.155 4.45.162 1.2.507 2.21 1.31 3.012.802.803 1.813 1.148 3.013 1.31C6.134 20 7.603 20 9.427 20h5.146c1.824 0 3.293 0 4.45-.155 1.2-.162 2.21-.507 3.012-1.31.803-.802 1.148-1.813 1.31-3.013.155-1.156.155-2.625.155-4.449v-.146c0-1.824 0-3.293-.155-4.45-.162-1.2-.507-2.21-1.31-3.013-.802-.802-1.813-1.147-3.013-1.309C17.866 2 16.397 2 14.573 2zm-3.577 6.132 3.5 2a1 1 0 0 1 0 1.736l-3.5 2A1 1 0 0 1 9.5 13V9a1 1 0 0 1 1.496-.868zM7 22.5a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1z"></path></svg>
+                        </div>
+                    </div>
+                    <div  id="footervideodiv" style="display:none" class="bg-[rgb(8,102,255)] w-25 h-1">
+                    </div>
+                </div>
+            </a>
+            <a href="http://127.0.0.1:3000/marketplace">
+                <div class="w-25 h-15">
+                    <div class="w-25 h-13  hover:bg-[rgb(242,242,242)] flex items-center justify-center rounded-md">
+                        <div id="Marketdiv" style="" class="w-6 h-6">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--secondary-icon);"><path d="M1.588 3.227A3.125 3.125 0 0 1 4.58 1h14.84c1.38 0 2.597.905 2.993 2.227l.816 2.719a6.47 6.47 0 0 1 .272 1.854A5.183 5.183 0 0 1 22 11.455v4.615c0 1.355 0 2.471-.119 3.355-.125.928-.396 1.747-1.053 2.403-.656.657-1.475.928-2.403 1.053-.884.12-2 .119-3.354.119H8.929c-1.354 0-2.47 0-3.354-.119-.928-.125-1.747-.396-2.403-1.053-.657-.656-.929-1.475-1.053-2.403-.12-.884-.119-2-.119-3.354V11.5l.001-.045A5.184 5.184 0 0 1 .5 7.8c0-.628.092-1.252.272-1.854l.816-2.719zM10 21h4v-3.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V21zm6-.002c.918-.005 1.608-.025 2.159-.099.706-.095 1.033-.262 1.255-.485.223-.222.39-.55.485-1.255.099-.735.101-1.716.101-3.159v-3.284a5.195 5.195 0 0 1-1.7.284 5.18 5.18 0 0 1-3.15-1.062A5.18 5.18 0 0 1 12 13a5.18 5.18 0 0 1-3.15-1.062A5.18 5.18 0 0 1 5.7 13a5.2 5.2 0 0 1-1.7-.284V16c0 1.442.002 2.424.1 3.159.096.706.263 1.033.486 1.255.222.223.55.39 1.255.485.551.074 1.24.094 2.159.1V17.5a2.5 2.5 0 0 1 2.5-2.5h3a2.5 2.5 0 0 1 2.5 2.5v3.498zM4.581 3c-.497 0-.935.326-1.078.802l-.815 2.72A4.45 4.45 0 0 0 2.5 7.8a3.2 3.2 0 0 0 5.6 2.117 1 1 0 0 1 1.5 0A3.19 3.19 0 0 0 12 11a3.19 3.19 0 0 0 2.4-1.083 1 1 0 0 1 1.5 0A3.2 3.2 0 0 0 21.5 7.8c0-.434-.063-.865-.188-1.28l-.816-2.72A1.125 1.125 0 0 0 19.42 3H4.58z"></path></svg>
+                        </div>
+                         <div  id="Marketshowdiv" style="display:none" class="w-6 h-6">
+                           
+                            <svg viewBox="0 0 24 24" style="color:blue" width="24" height="24" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--primary-button-background);"><path d="M4.581 1c-1.38 0-2.597.905-2.993 2.227l-.816 2.72A6.45 6.45 0 0 0 .5 7.8c0 1.425.573 2.716 1.501 3.655L2 11.5v4.57c0 1.355 0 2.471.119 3.355.124.928.396 1.747 1.053 2.403.656.657 1.475.928 2.403 1.053.884.12 2 .119 3.354.119h6.142c1.354 0 2.47 0 3.354-.119.928-.125 1.747-.396 2.403-1.053.657-.656.928-1.475 1.053-2.403.12-.884.119-2 .119-3.354V11.5l-.001-.045A5.183 5.183 0 0 0 23.5 7.8a6.47 6.47 0 0 0-.272-1.854l-.816-2.719A3.125 3.125 0 0 0 19.42 1H4.58zM20 12.716V16c0 1.442-.002 2.424-.1 3.159-.096.706-.263 1.033-.486 1.255-.222.223-.55.39-1.255.485-.551.074-1.24.094-2.159.1V17.5a2.5 2.5 0 0 0-2.5-2.5h-3A2.5 2.5 0 0 0 8 17.5v3.498c-.918-.005-1.608-.025-2.159-.099-.706-.095-1.033-.262-1.255-.485-.223-.222-.39-.55-.485-1.255C4.002 18.424 4 17.443 4 16v-3.284A5.192 5.192 0 0 0 5.7 13a5.18 5.18 0 0 0 3.15-1.062A5.18 5.18 0 0 0 12 13a5.18 5.18 0 0 0 3.15-1.062A5.18 5.18 0 0 0 18.3 13a5.2 5.2 0 0 0 1.7-.284zM14 21h-4v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V21z"></path></svg>
+                        </div>
+                    </div>
+                    <div  id="Marketfooterdiv" style="display:none" class="bg-[rgb(8,102,255)] w-25 h-1">
+                    </div>
+                </div>
+            </a>
+            <a href="http://127.0.0.1:3000/game">
+                <div class="w-25 h-15">
+                    <div class="w-25 h-13 flex items-center justify-center hover:bg-[rgb(242,242,242)] rounded-md">
+                        <div id="gameheaderdiv" class="w-6 h-6">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--secondary-icon);"><path d="M8 8a1 1 0 0 1 1 1v2h2a1 1 0 1 1 0 2H9v2a1 1 0 1 1-2 0v-2H5a1 1 0 1 1 0-2h2V9a1 1 0 0 1 1-1zm8 2a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0zm-2 4a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0z"></path><path d="M.5 11a7 7 0 0 1 7-7h9a7 7 0 0 1 7 7v2a7 7 0 0 1-7 7h-9a7 7 0 0 1-7-7v-2zm7-5a5 5 0 0 0-5 5v2a5 5 0 0 0 5 5h9a5 5 0 0 0 5-5v-2a5 5 0 0 0-5-5h-9z"></path></svg>
+                        </div>
+                        <div class="w-6 h-6" style="display:none" id="gamebluediv">
+                            <svg viewBox="0 0 24 24" style="color:blue" width="24" height="24" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--primary-button-background);"><path d="M7.5 4a7 7 0 0 0-7 7v2a7 7 0 0 0 7 7h9a7 7 0 0 0 7-7v-2a7 7 0 0 0-7-7h-9zM8 8a1 1 0 0 1 1 1v2h2a1 1 0 1 1 0 2H9v2a1 1 0 1 1-2 0v-2H5a1 1 0 1 1 0-2h2V9a1 1 0 0 1 1-1zm8 2a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0zm-.5 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg>
+                        </div>
+                    </div>
+                    <div  id="gamefooterdiv" style="display:none" class="bg-[rgb(8,102,255)] w-25 h-1">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="w-110 h-15 bg-[rgb(255,255,255)] flex justify-end">
+        <div class="w-80 h-15 flex items-center bg-[rgb(255,255,255)] flex justify-end ">
+            <div class="flex w-50 justify-around">
+                <div class="w-10 h-10 hover:bg-[rgb(214,217,221)] bg-[rgb(242,242,242)] rounded-full flex items-center justify-center cursor-pointer ">
+                    <div class="w-5 h-5">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--primary-icon);"><path d="M18.5 1A1.5 1.5 0 0 0 17 2.5v3A1.5 1.5 0 0 0 18.5 7h3A1.5 1.5 0 0 0 23 5.5v-3A1.5 1.5 0 0 0 21.5 1h-3zm0 8a1.5 1.5 0 0 0-1.5 1.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3A1.5 1.5 0 0 0 21.5 9h-3zm-16 8A1.5 1.5 0 0 0 1 18.5v3A1.5 1.5 0 0 0 2.5 23h3A1.5 1.5 0 0 0 7 21.5v-3A1.5 1.5 0 0 0 5.5 17h-3zm8 0A1.5 1.5 0 0 0 9 18.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5h-3zm8 0a1.5 1.5 0 0 0-1.5 1.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5h-3zm-16-8A1.5 1.5 0 0 0 1 10.5v3A1.5 1.5 0 0 0 2.5 15h3A1.5 1.5 0 0 0 7 13.5v-3A1.5 1.5 0 0 0 5.5 9h-3zm0-8A1.5 1.5 0 0 0 1 2.5v3A1.5 1.5 0 0 0 2.5 7h3A1.5 1.5 0 0 0 7 5.5v-3A1.5 1.5 0 0 0 5.5 1h-3zm8 0A1.5 1.5 0 0 0 9 2.5v3A1.5 1.5 0 0 0 10.5 7h3A1.5 1.5 0 0 0 15 5.5v-3A1.5 1.5 0 0 0 13.5 1h-3zm0 8A1.5 1.5 0 0 0 9 10.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3A1.5 1.5 0 0 0 13.5 9h-3z"></path></svg>
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+                <div class="w-10 h-10 hover:bg-[rgb(214,217,221)] bg-[rgb(242,242,242)] rounded-full flex items-center justify-center cursor-pointer ">
+                    <div class="w-5 h-5">
+                        <svg viewBox="0 0 12 12" width="20" height="20" fill="currentColor" aria-hidden="true" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color:var(--primary-icon)"><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="m106.868 921.248-1.892 2.925a.32.32 0 0 1-.443.094l-1.753-1.134a.2.2 0 0 0-.222.003l-1.976 1.363c-.288.199-.64-.143-.45-.437l1.892-2.925a.32.32 0 0 1 .443-.095l1.753 1.134a.2.2 0 0 0 .222-.003l1.976-1.363c.288-.198.64.144.45.438m-3.368-4.251c-3.323 0-5.83 2.432-5.83 5.658 0 1.642.652 3.128 1.834 4.186a.331.331 0 0 1 .111.234l.03 1.01a.583.583 0 0 0 .82.519l1.13-.5a.32.32 0 0 1 .22-.015c.541.148 1.108.223 1.685.223 3.323 0 5.83-2.432 5.83-5.657 0-3.226-2.507-5.658-5.83-5.658" transform="translate(-450 -1073.5) translate(352.5 156.845)"></path></g></svg>
+                    </div>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-[rgb(242,242,242)] cursor-pointer hover:bg-[rgb(214,217,221)] flex items-center justify-center">
+                    <div class="w-5 h-5">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color:var(--primary-icon)"><path d="M3 9.5a9 9 0 1 1 18 0v2.927c0 1.69.475 3.345 1.37 4.778a1.5 1.5 0 0 1-1.272 2.295h-4.625a4.5 4.5 0 0 1-8.946 0H2.902a1.5 1.5 0 0 1-1.272-2.295A9.01 9.01 0 0 0 3 12.43V9.5zm6.55 10a2.5 2.5 0 0 0 4.9 0h-4.9z"></path></svg>
+                    </div>
+                </div>
+                <div class="w-10 h-10 bg-[rgb(242,242,242)] hover:bg-[rgb(214,217,221)] cursor-pointer rounded-full flex items-center justify-center">
+                    <div class="w-10 h-10 ">
+                        <svg aria-label="Your profile" class="cursor-pointer x3ajldb rounded-full    bg-[rgb(22,142,242)] absolute"data-visualcompletion="ignore-dynamic" role="img" style="height:40px;width:40px">
+                            <image class="bg-[rgb(242,242,242)]" style="height:40px;width:40px " x="0" y="0" height="80%" preserveAspectRatio="xMidYMid slice" width="80%" xlink:href="https://scontent.fixc1-7.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s40x40&amp;_nc_cat=1&amp;ccb=1-7&amp;_nc_sid=136b72&amp;_nc_ohc=a1K6_KaoqeEQ7kNvgHhMriQ&amp;_nc_oc=AdndPj-M9rl1U8LRjkHBD83oDSQEHM7jjMJy9-GLcAFgiZ5UcLbxmGTT9d1oWo-zA9k8Xgi1sZlXRFwVX69jca6p&amp;_nc_zt=24&amp;_nc_ht=scontent.fixc1-7.fna&amp;oh=00_AYGQ_MuS36TXChSduBzRrVX0g6jmlDl_ZqbeeAjv-tRZ7A&amp;oe=6811E53A">
+
+                            </image>
+                        </svg>
+                        <div class="relative w-4 h-4 bg-[rgb(255,255,255)] rounded-full top-6 left-7 flex items-center justify-center">
+                            <div class="w-3 h-3 bg-[rgb(226,229,233)] rounded-full " onclick="showAboutUser()">
+                                <!--div class="w-2 h-2 bg-[rgb(120,210,200)]"-->
+                                    <svg class="w-2 h-2 ml-0.5 mt-0.5" onclick="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                <!--/div-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--svg class="w-1.5 h-1.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg-->
+            </div>
+            <div>
+            </div>
+            <div>
+            </div> 
+            <div>
+            </div> 
+
+        </div>
+    </div>
+</div>
+<div style="z-index:90"class="w-full flex justify-end absolute 1 -z-1">
+    <div class="  w-93 h-70 flex justify-center ">
+        <div   id="show_user_data" style="display:none" class="relative z-90 shadow-lg w-90 h-70 bg-[rgb(255,255,255)]">
+            <div class="w-89 h-30 bg-[rgb(255,255,255)] flex items-center justify-center">
+                <div class="w-80 h-29 bg-[rgb(255,255,255)] rounded-md shadow-md absolute">
+                    <div class="w-80 h-14 bg-[rgb(255,255,255)] flex justify-center item-center cursor-pointer">
+                        <div class="w-78 h-13 bg-[rgb(255,255,255)] rounded-md hover:bg-[rgb(242,242,242)]">
+                            <div>
+                                <div class="flex w-55 justify-around">
+                                    <div class="w-10 h-10">
+                                        <svg aria-label="Your profile" class="x3ajldb rounded-full absolute" data-visualcompletion="ignore-dynamic" role="img" style="height:40px;width:40px"><!--mask id="«R1ldm6l6ismipapd5aq»"--><!--circle cx="20" cy="20" fill="white" r="20"></circle--><!--circle cx="34" cy="34" data-visualcompletion="ignore" fill="" r="8"></circle--><!--/mask--><!--g mask="url(#«R1ldm6l6ismipapd5aq»)"--><image class="" style="height:40px;width:40px " x="0" y="0" height="80%" preserveAspectRatio="xMidYMid slice" width="80%" xlink:href="https://scontent.fixc1-7.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s40x40&amp;_nc_cat=1&amp;ccb=1-7&amp;_nc_sid=136b72&amp;_nc_ohc=a1K6_KaoqeEQ7kNvgHhMriQ&amp;_nc_oc=AdndPj-M9rl1U8LRjkHBD83oDSQEHM7jjMJy9-GLcAFgiZ5UcLbxmGTT9d1oWo-zA9k8Xgi1sZlXRFwVX69jca6p&amp;_nc_zt=24&amp;_nc_ht=scontent.fixc1-7.fna&amp;oh=00_AYGQ_MuS36TXChSduBzRrVX0g6jmlDl_ZqbeeAjv-tRZ7A&amp;oe=6811E53A"></image><!--circle class="xbh8q5q x1pwv2dq xvlca1e" cx="20" cy="20" r="20"></circle--><!--/g--></svg>
+                                    </div>
+                                    <div class="w-35 flex items-center">
+                                        <div class="h-6 text-lg font-[500]">
+                                            <%= current_user.email %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-80 h-2 flex items-center justify-center">
+                        <div class="h-0.5">
+                            <hr class="w-75  border-1 text-[rgb(208,211,215)]"/>
+                        </div>
+                    </div>
+                    <div class="w-80 h-14 flex  items-center justify-center absolute">
+                        <div class="w-75 absolute h-11">
+                            <button class="hover:bg-[rgb(214,217,221)] cursor-pointer w-75 h-10 bg-[rgb(242,242,242)] rounded-md pl-3   text-md font-[500]"><i data-visualcompletion="css-img" class="  x1b0d499 xep6ejk" aria-hidden="true" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v4/y9/r/SRMpAnW50Ui.png&quot;); background-position: 0px -298px; background-size: auto; width: 16px; height: 16px; background-repeat: no-repeat; display: inline-block;"></i>&nbspSee all profiles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-90 h-30 bg-[rgb(255,255,255)]">
+                <div class="w-90 h-16 bg-[rgb(255,255,255)] flex items-end">
+                    <div class="flex justify-center items-center w-90 h-16 bg-[rgb(255,255,255)]  "> 
+                        <div class="w-85 h-13 flex justify-between hover:bg-[rgb(242,242,242)] cursor-pointer rounded-md">
+                            <div class="w-9 h-9 rounded-full bg-[rgb(214,217,221)] flex items-center justify-center ml-2 mt-2">
+                                <div class="w-5 h-5">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk" aria-hidden="true" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v4/yf/r/N1cx5zPsD4a.png&quot;); background-position: 0px -419px; background-size: auto; width: 21px; height: 21px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </div>
+                            </div>
+                            <div class="w-49  flex items-center justify-center">
+                                <div class="h-6 w-44 text-md font-[600]">
+                                    Settings & privacy
+                                </div>
+                            </div>
+                            <div class="w-14 h-14">
+                                <svg viewBox="0 0 24 24 " class="" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    </g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                    </g>
+                                    <g id="SVGRepo_iconCarrier">
+                                    <path style="fill:rgb(132,137,144)" fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 16.2803C9.67678 15.9874 9.67678 15.5126 9.96967 15.2197L13.1893 12L9.96967 8.78033C9.67678 8.48744 9.67678 8.01256 9.96967 7.71967C10.2626 7.42678 10.7374 7.42678 11.0303 7.71967L14.7803 11.4697C15.0732 11.7626 15.0732 12.2374 14.7803 12.5303L11.0303 16.2803C10.7374 16.5732 10.2626 16.5732 9.96967 16.2803Z" fill="#3A52EE">
+                                    </path> 
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="z-index: 53;"class="w-90 h-12 bg-[rgb(255,255,255)] flex items-end">
+                    <div class="flex justify-center w-90 h-12 bg-[rgb(255,255,255)]"> 
+                        <div class="w-85 flex justify-between hover:bg-[rgb(242,242,242)] cursor-pointer rounded-lg">
+                            <div class="w-9 h-9 rounded-full bg-[rgb(214,217,221)] flex items-center justify-center mt-2 ml-2">
+                                <div class="w-5 h-5">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk" aria-hidden="true" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v4/yT/r/uUd4Xa0YZdV.png&quot;); background-position: 0px -340px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </div>
+                            </div>
+                            <div class="w-49  flex items-center justify-center">
+                                <div class="h-6 w-44 text-md font-[600]">
+                                    <%= button_to "Log out" ,destroy_user_session_path, method: :delete %> 
+                                </div>
+                            </div>
+                            <div class="w-14 h-14">
+                                <svg viewBox="0 0 24 24 " class="" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                <path style="fill:rgb(132,137,144)" fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 16.2803C9.67678 15.9874 9.67678 15.5126 9.96967 15.2197L13.1893 12L9.96967 8.78033C9.67678 8.48744 9.67678 8.01256 9.96967 7.71967C10.2626 7.42678 10.7374 7.42678 11.0303 7.71967L14.7803 11.4697C15.0732 11.7626 15.0732 12.2374 14.7803 12.5303L11.0303 16.2803C10.7374 16.5732 10.2626 16.5732 9.96967 16.2803Z" fill="#3A52EE">
+                                </path> 
+                                </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="w-84 h-10 flex items-center justify-center  cursor-pointer">
+                <div class="w-80"> 
+                    <div class="flex w-80 justify-around text-xs font-[500] text-[rgb(111,113,117)]">
+                        <div class="hover:underline">
+                            Privacy 
+                        </div>
+                        <div class="hover:underline">
+                            .
+                        </div>
+                        <div class="hover:underline">
+                            Terms  
+                        </div>
+                        <div class="hover:underline">
+                            .
+                        </div>
+                        <div class="hover:underline">
+                            Advertising  
+                        </div>
+                        <div>
+                            · 
+                        </div>
+                        <div class="hover:underline">
+                            Ad choices
+                        </div>
+                        <div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v4/yI/r/MHWISMefH0t.png&quot;); background-position: 0px -296px; background-size: auto; width: 12px; height: 12px; background-repeat: no-repeat; display: inline-block;"></i>
+                        </div>
+                        <div>
+                            .
+                        </div>
+                        <div class="hover:underline">
+                            Cookies
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex justify-around w-30 text-xs text-[rgb(132,135,138)]">
+                            <div>
+                                .
+                            </div>
+                            <div class="hover:underline">
+                                More
+                            </div>
+                            <div>
+                                .
+                            </div>
+                            <div class="hover:underline">
+                                Meta
+                            </div>  
+                            <div class="hover:underline">
+                                ©
+                            </div> 
+                            <div class="hover:underline">
+                                2025
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% end %>
+
+<script>
+                
+                 if(window.location.href=="http://127.0.0.1:3000/friendrequestshow")
+     {
+        console.log(":::::::::::::");
+         let showpeopledivcolor=document.getElementById("Footerpeoplediv");
+                     console.log(showpeopledivcolor,",,,,,,,,,,,,,")
+                      showpeopledivcolor.style.display="block";
+                      let peopledivdisplay=document.getElementById("peopledivisiondiv")
+                      console.log("98765",peopledivdisplay)
+                      peopledivdisplay.style.display="none";
+                      let people_div=document.getElementById("peoplediv");
+                      if(people_div.style.display=="none")
+                      {
+                        people_div.style.display="block";
+                      }
+        
+     }
+
+                      if(window.location.href=="http://127.0.0.1:3000/game")
+                      {
+                        console.log("i am in the game div")
+                        let gamedivfooter=document.getElementById("gamefooterdiv");
+                        if(gamedivfooter.style.display=="none")
+                        {
+                         gamedivfooter.style.display="block";   
+                        }
+                        document.getElementById("gameheaderdiv").style.display="none";
+                        if(document.getElementById("gamebluediv").style.display=="none")
+                        {
+                         document.getElementById("gamebluediv").style.display="block";   
+                        }
+
+                      }
+                
+                   if(window.location.href=="http://127.0.0.1:3000/marketplace")
+                   {
+                    console.log("i am in market")
+                    let marketdiv=document.getElementById("Marketshowdiv");
+                    let footerdivmarket=document.getElementById("Marketfooterdiv");
+                    let Marketblackdiv=document.getElementById("Marketdiv");
+                    
+                    
+                      Marketblackdiv.style.display="none";  
+                    
+                    if(footerdivmarket.style.display=="none")
+                    {
+                       footerdivmarket.style.display="block"; 
+                    }
+                    if(marketdiv.style.display=="none")
+                    {
+                        marketdiv.style.display="block";
+                    }
+                   }
+                   console.log(window.location.href,"BBBBBBBBBBB")
+                    console.log("000000",window.location.href,">>>>>>>>");
+                     if(window.location.href=="http://127.0.0.1:3000/")
+                     {
+                        let showdivhomepart=document.getElementById("showcolorfullhouse")
+                        if(showdivhomepart.style.display=="none")
+                        {
+                          showdivhomepart.style.display="block"  
+                        }
+                     }
+                    if(window.location.href=="http://127.0.0.1:3000/")
+                    {    let showhousedivheader=document.getElementById("housedivheader");
+                         showhousedivheader.style.display="none";
+                         let show_border=document.getElementById("show_border_home"); 
+                          if(show_border.style.display=="none"){
+                            console.log("_________________test disappearence of div__________________")
+                            show_border.style.display="block"; 
+                          }
+                        else
+                        {
+                        console.log("/////////////hhhhhhhhhh\\\\\\\\\\");
+                        show_border.style.display="none"; 
+                        }
+                        let housedivshow=document.getElementById("housedivheader")
+                        console.log(housedivshow,"______housedivshow_______")
+                    }
+                     if(window.location.href=="http://127.0.0.1:3000/")
+                     {
+                        let hidepeoplediv=document.getElementById("peoplediv");
+                        console.log("hidecoloredpeoplediv",hidepeoplediv)
+                        hidepeoplediv.style.display="none"
+                     }
+                    if(window.location.href=="http://127.0.0.1:3000/people")
+                    {
+                      let showhousecolor=document.getElementById("showcolorfullhouse");
+                      console.log(showhousecolor,"i am in peopleview")
+                      showhousecolor.style.display="none";
+                    }
+                  
+               
+               if(window.location.href=="http://127.0.0.1:3000/people")
+                    {
+                      let showpeopledivcolor=document.getElementById("Footerpeoplediv");
+                     console.log(showpeopledivcolor,",,,,,,,,,,,,,")
+                      showpeopledivcolor.style.display="block";
+                      let peopledivdisplay=document.getElementById("peopledivisiondiv")
+                      console.log("98765",peopledivdisplay)
+                      peopledivdisplay.style.display="none";
+                      let people_div=document.getElementById("peoplediv");
+                      if(people_div.style.display=="none")
+                      {
+                        people_div.style.display="block";
+                      }
+                    }
+                    if(window.location.href=="http://127.0.0.1:3000/videopage")
+                    {
+                        console.log("9999022233");
+                        let videoshowdiv=document.getElementById("videodiv")
+                        console.log(";;;;;;;;",videoshowdiv)
+                        
+                           videoshowdiv.style.display="none"; 
+                        
+                        let videodivfooter=document.getElementById("footervideodiv");
+                        if(videodivfooter.style.display=="none")
+                        {
+                          videodivfooter.style.display="block"  
+                        }
+                        let videoheaderdiv=document.getElementById("videobluediv");
+                        if(videoheaderdiv.style.display=="none")
+                        {
+                          videoheaderdiv.style.display="block";  
+                        }
+                    }
+                    function showHomeColor(){
+                        document.getElementById("demo").innerHTML = 
+"The full URL of this page is:<br>" + window.location.href;
+            console.log("----homechangecolordiv----")
+            let show_border=document.getElementById("show_border_home");
+           console.log("ppppppppppppppppppp",show_border)
+            if(show_border.style.display=="none"){
+            console.log("_________________test disappearence of div__________________")
+            show_border.style.display="block"; 
+            }
+            else
+            {
+            console.log("/////////////hhhhhhhhhh\\\\\\\\\\");
+            show_border.style.display="none"; 
+            }
+            
+                }
+ </script>
+</body>

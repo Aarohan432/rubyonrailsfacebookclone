@@ -1,0 +1,875 @@
+
+<head>
+  
+  
+  <!---script>
+     $(document).ready(function() {
+      console.log("document.ready");
+      toastr.info('document.ready');});
+      $(window).load(function() {
+      console.log("window.load");
+      toastr.info('window.load');});
+        function checkemailphone()
+        {
+        let checkemailorphone=document.getElementById("email_phone").value;
+        console.log("______________________________",checkemailorphone);
+        var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(checkemailorphone)) {
+        document.getElementById("checkphoneoremail").innerText = "only email allowed";
+        console.log("hhhhhhhhhhh");
+        } 
+        else 
+        {
+        console.log("hlooooooooooooooooooo")
+        document.getElementById("checkphoneoremail").innerText = "";
+        }
+        }
+  function checkpassword(){
+  var passwordchecker=document.getElementById("passwordcheck").value;
+  console.log("_______________________",passwordchecker)
+  var passwordrejex=/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
+  if(!passwordrejex.test(passwordchecker))
+  {
+    document.getElementById("passworderror").innerText="Password has at least one uppercase, one lowercase character, atleast one special character .length minimum 8 charcters "
+    console.log("____________hh_______________")
+  }
+  else
+  {
+ document.getElementById("passworderror").innerText=""
+  }
+  
+  }
+  
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+}
+
+
+  </script-->
+  
+    <style>
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 3px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+
+</style>
+<!--script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    </script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js">
+   </script-->
+</head>
+ 
+  <!--script>
+   
+  </script-->
+  <!--script>
+  $(document).ready(function() {
+      console.log("document.ready");
+      toastr.info('document.ready');});
+      $(window).load(function() {
+      console.log("window.load");
+      toastr.info('window.load');});
+  </script-->
+<body class="bg-[rgb(240,242,255)]">
+  <style>
+        #toast-container
+        {
+        color:DodgerBlue;
+        background-color: coral;
+        }
+    </style>
+    <!--script>
+      
+     $(document).ready(function() {
+       toastr.options = {
+                      "closeButton": false,
+                      "debug": false,
+                      "",
+                      "onclick": null,
+                      "showDuration": "300",
+                      "hideDuration": "1000",
+                      "timeOut": "5000",
+                      "extendedTimeOut": "1000",
+                      "showEasing": "swing",
+                      "hideEasing": "linear",
+                      "showMethod": "fadeIn",
+                      "hideMethod": "fadeOut"
+                      
+                      
+                  }
+      console.log("document.ready");
+      toastr.info('document.ready');});
+      $(window).load(function() {
+      console.log("window.load");
+      toastr.info('window.load');});
+    </script---->
+  <!--div class="w-20 h-5 bg-[rgb(120,120,210)]"-->
+   
+    <style>
+        #toast-container
+        { width:50vw;
+          height:16rem;
+          color:DodgerBlue;
+          background-color: coral;
+          position:absolute;
+          top:24px;
+          left:482px;
+        }
+    </style>
+    <script>
+      
+     $(document).ready(function() {
+       /*toastr.options = {
+                      "closeButton": false,
+                      "debug": false,
+                      "",
+                      "onclick": null,
+                      "showDuration": "300",
+                      "hideDuration": "1000",
+                      "timeOut": "5000",
+                      "extendedTimeOut": "1000",
+                      "showEasing": "swing",
+                      "hideEasing": "linear",
+                      "showMethod": "fadeIn",
+                      "hideMethod": "fadeOut"
+                      
+                      
+                  }*/
+      /*console.log("document.ready");
+      toastr.info('document.ready');});
+      $(window).load(function() {
+      console.log("window.load");
+      toastr.info('window.load');*/});
+    </script>
+  <!--/div-->
+<div class="w-full h-23 bg-[rgb(240,242,255)] flex justify-center items-center">
+   <!--script>
+   $(document).ready(function() {
+      console.log("document.ready");
+      toastr.info('document.ready');});
+      $(window).load(function() {
+      console.log("window.load");
+      toastr.info('window.load');});
+  </script-->
+  <div class="w-65 h-16 bg-[rgb(240,242,255)] text-[rgb(8,102,255)] text-6xl font-[650]">
+  facebook
+  </div>
+</div>
+<div class="w-full flex justify-center mt-4 ">
+  <div class="w-110  bg-[rgb(255,255,255)] rounded-lg">
+    <div class="w-110 h-13 bg-[rgb(255,255,255)] flex justify-center rounded-lg">
+      <div class="w-63 h-11 bg-[rgb(255,255,255)] text-2xl flex justify-center mt-2">
+        <div class="w-63 h-9 bg-[rgb(255,255,255)] font-[700] text-black-600"> 
+          Create a new account
+        </div>
+       
+      </div>
+      
+    
+    </div>
+    <div class="w-110 h-6 bg-[rgb(255,255,255)] flex justify-center">
+      <div class="w-40 bg-[rgb(255,255,255)]">
+        <div class=" text-md text-[rgb(96,103,121)]">
+          It's quick and easy.
+        </div>
+      </div>
+    </div>
+    <div class="w-110 h-7 bg-[rgb(255,255,255)] flex items-center">
+      <div class="h-2 w-110">
+        <hr class="w-110 h-0.5 text-[rgb(245,246,247)] bg-gray-200 " /> 
+      </div> 
+    </div>
+    <div class="">  
+      <script>
+      
+     /* $(document).ready(function() {
+       toastr.options = {
+                      "closeButton": false,
+                      "debug": false,
+                      "positionClass": "toast-top-left",
+                      "onclick": null,
+                      "showDuration": "300",
+                      "hideDuration": "1000",
+                      "timeOut": "5000",
+                      "extendedTimeOut": "1000",
+                      "showEasing": "swing",
+                      "hideEasing": "linear",
+                      "showMethod": "fadeIn",
+                      "hideMethod": "fadeOut"
+                      
+                      
+                  }
+      console.log("document.ready");
+      toastr.info('document.ready');});
+      $(window).load(function() {
+      console.log("window.load");
+      toastr.info('window.load');});*/
+    </script>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <!--%= render "devise/shared/error_messages", resource: resource %-->
+      
+      <div class="w-110 flex justify-around h-15">
+        <div class="field h-13">
+     
+          <%= f.text_field :first_name,placeholder:"Firstname",oninput:"validname()", autofocus: true, autocomplete: "first_name",id:"first_namefield",class:"w-50 h-10 border border-[rgb(215,218,222)] rounded-md pl-3" %>
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+          </script>
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js">
+          </script>
+          
+          <div  id="errorfirstnamediv"class="w-50 h-5  text-red-600 text-sm/6">
+           
+          </div>
+          <script>
+           /* function validname()
+            {
+              let t=document.getElementById("first_namefield").value;
+              let m=document.getElementById("errorfirstnamediv")
+              console.log(m,"..................");
+              console.log("_________________________",t);
+              console.log(t.length);
+              if(t.length<3)
+              { myFunction();
+                console.log(document.getElementById("errorfirstnamediv"))
+                document.getElementById("errorfirstnamediv").innerText="length must be greater than 3"
+                console.log("hhhh____")
+              }
+              else{
+                document.getElementById("errorfirstnamediv").innerText=""
+              }
+            }*/
+          </script>
+        </div>
+        <div class="field h-13">
+          <%= f.text_field :sur_name,placeholder:"Surname",oninput:"",id:"surnamecheck", autofocus: true, autocomplete: "sur_name",class:"w-50 h-10 border border-[rgb(215,218,222)] rounded-md pl-3" %>
+          <!--%= f.label :password_confirmation %--><!--br /-->
+          <!--%= f.password_field :password_confirmation, autocomplete: "new-password" %-->
+        <div class="text-sm/6" id="surnamechecker",class="w-50 h-5 text-sm/6">
+
+        </div>
+        <script>
+          function passwordvalid()
+          {
+            console.log("______====================_______")
+            let password_valid=document.getElementById("")
+          }
+          function surnamevalid()
+          {
+            let sur_name=document.getElementById("surnamecheck").value;
+            if(sur_name.length<3)
+            {
+
+              $(document).ready(function() {
+       toastr.options = {
+                     /* "closeButton": false,
+                      "debug": false,
+                      "positionClass": "toast-top-left",
+                      "onclick": null,
+                      "showDuration": "300",
+                      "hideDuration": "1000",
+                      "timeOut": "5000",
+                      "extendedTimeOut": "1000",
+                      "showEasing": "swing",
+                      "hideEasing": "linear",
+                      "showMethod": "fadeIn",
+                      "hideMethod": "fadeOut"
+                      */
+                      
+                  }
+      console.log("document.ready");
+      toastr.info('document.ready');});
+      $(window).load(function() {
+      console.log("window.load");
+      toastr.info('window.load');});
+              console.log("::::::::::::::::::::::::::");
+              console.log(document.getElementById("surnamecheck"))
+              document.getElementById("surnamechecker").innerText="length must be greater than 3"
+            }
+            else
+            {
+             document.getElementById("surnamechecker").innerText=""    
+            }
+            console.log("///////////////////////",t);
+
+          }
+        </script>
+        </div>
+      </div>
+        <!--div class="field h-10 mt-5"-->
+        <!--%= f.label :email %-->
+        <!--%= f.email_field :email,placeholder:"Mobile number or email address", autofocus: true, autocomplete: "email",class:"w-100 h-9 border border-[rgb(215,218,222)] rounded-md pl-3" %-->
+        <!--/div-->
+        <!--div-->
+        <!--%=f.select(:months,options_for_select([['JANUARY','JANUARY'],['FEBRUARY','FEBRUARY'],['MARCH','MARCH'],['APRIL','APRIL'],['MAY','MAY'],['JUN','JUN'],['JUL','JUL'],['AUG','AUG'],['SEP','SEP'],['OCT','OCT'],['NOV','NOV'],['DEC','DEC']],class:"pl-4 w-50 h-15 bg-black-600") ,class:"pl-4 w-50 h-15 bg-black-600")  %-->
+        <!--/div-->
+      <div>
+        <div class="w-110 h-3 bg-[rgb(255,255,255)]" >
+          <div class="w-30 h-3 bg-[rgb(255,255,255)] flex justify-end">
+            <div class="w-28 h-3 bg-[rgb(255,255,255)] flex">  
+              <div class="text-sm/3 w-21">
+                Date of birth
+              </div>
+              <div class="w-3 h-3">
+                <svg fill="gray" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 313.45 313.45" xml:space="preserve" stroke="gray"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M267.592,45.853C238.019,16.282,198.65,0,156.719,0C114.791,0,75.414,16.282,45.85,45.853 c-61.132,61.125-61.132,160.604,0,221.738c29.571,29.574,68.941,45.854,110.87,45.859c0.009,0,0.009,0,0.021,0 c41.91,0,81.284-16.279,110.852-45.859c29.573-29.567,45.858-68.94,45.858-110.863C313.45,114.806,297.165,75.42,267.592,45.853z M163.898,235.009h-18.916v-21.431h18.916V235.009z M198.675,131.886c-1.903,5.191-4.498,9.791-7.8,13.787 c-3.015,3.996-6.558,8.104-10.629,12.316c-4.005,4.284-8.082,9.094-12.226,14.426c-1.472,2.318-2.63,4.774-3.465,7.368 c-0.985,5.896-1.336,11.997-1.06,18.321h-18.507c-0.141-10.659,0.88-18.813,3.044-24.434c2.171-5.604,6.825-12.274,13.971-19.993 c2.876-3.3,5.68-6.53,8.4-9.689c3.855-4.63,6.797-9.088,8.833-13.375c2.035-4.348,3.051-9.47,3.051-15.366 c0-6.738-1.598-12.845-4.792-18.318c-3.477-5.405-9.235-8.208-17.258-8.416c-11.073,0.348-18.348,4.107-21.828,11.262 c-1.846,3.297-3.095,7.017-3.729,11.157c-0.853,4.353-1.27,8.809-1.27,13.372h-18.065c-0.562-13.577,2.501-25.298,9.184-35.17 c6.53-10.079,17.555-15.252,33.062-15.54c13.28,0.141,23.818,3.744,31.612,10.809c7.854,7.134,11.859,16.996,11.998,29.591 C201.203,121.008,200.356,126.974,198.675,131.886z"></path> </g> </g></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-around w-110 mt-3">
+          <div class="w-33 rounded-md">
+            <select name="years" id="years" class="rounded-md w-33 h-9 pl-5 border border-[rgb(215,218,222)]">
+       
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            </select>
+          </div>
+          <div class="w-33 rounded-md">
+            <select name="Date" id="Date" class=" rounded-md w-33 h-9 pl-5 border border-[rgb(215,218,222)]">
+       
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="goldfish">25</option>
+              <option value="goldfish">26</option>
+              <option value="goldfish">27</option>
+              <option value="goldfish">28</option>
+              <option value="goldfish">29</option>
+              <option value="goldfish">30</option>
+            </select>
+          </div>
+          <div class="w-33 ">
+            <select name="months" id="months" class="rounded-md w-33 h-9 pl-5 border border-[rgb(215,218,222)] rounded-md">
+              <option value="JAN">JAN</option>
+              <option value="FEB">FEB</option>
+              <option value="MAR">MAR</option>
+              <option value="APR">APR</option>
+              <option value="MAY">MAY</option>
+              <option value="JUN">JUN</option>
+              <option value="JUL">JUL</option>
+              <option value="AUG">AUG</option>
+              <option value="SEP">SEP</option>
+              <option value="OCT">OCT</option>
+              <option value="NOV">NOV</option>
+              <option value="DEC">DEC</option>
+       
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="w-110  bg-[rgb(255,255,255)] mt-2">
+        <div class="w-20 h-3 bg-[rgb(255,255,255)] flex justify-end">
+          <div class="w-18 h-3 bg-[rgb(255,255,255)] flex justify-around">  
+              <div class="text-sm/3 w-12">
+                Gender
+              </div>
+              <div class="w-3 h-3">
+                <svg fill="gray" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 313.45 313.45" xml:space="preserve" stroke="gray"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M267.592,45.853C238.019,16.282,198.65,0,156.719,0C114.791,0,75.414,16.282,45.85,45.853 c-61.132,61.125-61.132,160.604,0,221.738c29.571,29.574,68.941,45.854,110.87,45.859c0.009,0,0.009,0,0.021,0 c41.91,0,81.284-16.279,110.852-45.859c29.573-29.567,45.858-68.94,45.858-110.863C313.45,114.806,297.165,75.42,267.592,45.853z M163.898,235.009h-18.916v-21.431h18.916V235.009z M198.675,131.886c-1.903,5.191-4.498,9.791-7.8,13.787 c-3.015,3.996-6.558,8.104-10.629,12.316c-4.005,4.284-8.082,9.094-12.226,14.426c-1.472,2.318-2.63,4.774-3.465,7.368 c-0.985,5.896-1.336,11.997-1.06,18.321h-18.507c-0.141-10.659,0.88-18.813,3.044-24.434c2.171-5.604,6.825-12.274,13.971-19.993 c2.876-3.3,5.68-6.53,8.4-9.689c3.855-4.63,6.797-9.088,8.833-13.375c2.035-4.348,3.051-9.47,3.051-15.366 c0-6.738-1.598-12.845-4.792-18.318c-3.477-5.405-9.235-8.208-17.258-8.416c-11.073,0.348-18.348,4.107-21.828,11.262 c-1.846,3.297-3.095,7.017-3.729,11.157c-0.853,4.353-1.27,8.809-1.27,13.372h-18.065c-0.562-13.577,2.501-25.298,9.184-35.17 c6.53-10.079,17.555-15.252,33.062-15.54c13.28,0.141,23.818,3.744,31.612,10.809c7.854,7.134,11.859,16.996,11.998,29.591 C201.203,121.008,200.356,126.974,198.675,131.886z"></path> </g> </g></svg>
+              </div>
+          </div>
+
+        </div> 
+        <div class="flex w-110 justify-around mt-2">
+          <div class="border border-[rgb(215,218,222)] w-30 h-10 bg-[rgb(255,255,255)] flex justify-center items-center rounded-md">
+            <div class="w-30 h-5 flex justify-around"><div>Female</div><div><%= f.radio_button :Gender, 'Female',onclick:"hidediv()" %></div> </div>
+          </div>
+          <div class="  flex w-30 h-10 bg-[rgb(255,255,255)] justify-center items-center border border-[rgb(215,218,222)] rounded-lg">
+            <div class="w-30 h-4 flex justify-around items-center ">
+             <div> 
+                Male
+             </div>
+             <div class="h-5 flex items-center">
+               <div class="h-4"><%= f.radio_button :Gender, 'Male',onclick:"hidediv()" %></div>
+             </div>
+             
+            </div>
+          </div>
+          <div class="w-30 h-10 bg-[rgb(255,255,255)] flex items-center border border-[rgb(215,218,222)] rounded-md">
+            <div class="w-30 h-4 flex justify-around items-center ">
+              <div>
+                Custom
+
+              </div>
+              <div class="h-4">
+                <%= f.radio_button :Gender, 'Custom' ,onclick:"showdiv()"%>
+              </div> 
+              
+              <script>
+                function hidediv()
+                {
+                  const t=document.getElementById("Genderdiv");
+                  console.log(t);
+                  if(t.style.display=="inline")
+                  {
+                    console.log("hlo");
+                    t.style.display="none";
+                  }
+                 
+                  console.log("hhhhhhhhhhhhhh");
+
+                }
+                function showdiv() {
+                  const t=document.getElementById("Genderdiv");
+                  console.log(t);
+                  if(t.style.display=="none")
+                  {
+                    console.log("hlo");
+                    t.style.display="inline";
+                  }
+                 
+                  console.log("hhhhhhhhhhhhhh");
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="mt-3" id="Genderdiv" style="display:none">
+          <div class="w-60 bg-[rgb(255,255,255)] flex justify-center"> 
+            <div class="text-xs w-50 bg-black-600 text-[rgb(96,103,153)]">
+              your pronoun is visible to everyone
+            </div>
+          </div>
+          <div class="field h-10 mt-2 flex justify-center">
+            <div class="w-103 h-10" id="">
+              <%= f.text_field :Gender,placeholder:"Gender (optional)", autofocus: true, autocomplete: "sur_name",class:"w-103 h-10 border border-[rgb(215,218,222)] rounded-md pl-3",style:"" %>
+            </div>
+            <!--%= f.label :password_confirmation %--><!--br /-->
+            <!--%= f.password_field :password_confirmation, autocomplete: "new-password" %-->
+          </div>
+        </div>
+      </div>
+      <div class="field h-10 mt-3 flex justify-center">
+        <!--%= f.label :email %-->
+        <div class="w-103">
+          
+          <%= f.email_field :email,id:"email_phone",placeholder:"Mobile number or email address", autofocus: true, autocomplete: "email",class:"w-103 h-9 border border-[rgb(215,218,222)] rounded-md pl-3",oninput:"checkemailphone()" %>
+          <div class="w-110 h-5 flex justify-center">
+            <div id="checkphoneoremail"class="w-103 h-5 text-xs/8  text-red-600">
+
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <!--div class="w-110 h-5 flex justify-center">
+        <div id="checkphoneoremail"class="w-103 h-5 text-xs/8  text-red-600">
+
+        </div>
+      </div-->
+        <!--div class="w-60">
+        <div class="w-20">
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        </div>
+        <div class="w-20">
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        </div>
+        <div class="w-20">
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        </div>
+        </div-->
+      <div class="field flex justify-center h-12">
+          <!--%= f.label :password %-->
+          <!--% if @minimum_password_length %-->
+          <!--em--><!--(--><!--%= @minimum_password_length %--> <!--characters minimum--><!--)--><!--/em-->
+          <!--% end %-->
+          <div class="w-103 h-10  mt-2">
+            <%= f.password_field :password,placeholder:"New password",id:"passwordcheck",oninput:"checkpassword()", autocomplete: "new-password",class:"w-103 h-10 border border-[rgb(215,218,222)] rounded-md pl-3" %>
+          </div>
+          <div class="w-10 h-10 absolute  mt-2 ml-92 mt-4"> 
+            <div class="absolute w-5 h-5 mt-0">
+              <span class="absolute">
+                <i id="toggler"class="far fa-eye"></i>
+              </span>
+            </div>
+           
+         </div>
+         <script>
+            var password = document.getElementById('passwordcheck');
+            console.log(password,"DDDDDDDDDDDDDDDDDD")
+            var toggler = document.getElementById('toggler');
+            showHidePassword = () => {
+            console.log("hhhhhhhhh")
+            if (password.type == 'password') {
+            console.log("hlo guys")
+            password.setAttribute('type', 'text');
+            toggler.classList.remove('fa-eye-slash');
+            }
+             else {
+            console.log(".")
+            toggler.classList.add('fa-eye-slash');
+            password.setAttribute('type', 'password');
+            }
+            };
+            toggler.addEventListener('click', showHidePassword);
+            function eyeicon(){ 
+            console.log("aaaaaaaaaaaaaaaa")
+            let a=document.getElementById("eyeicon");
+            console.log(a)
+
+            }
+            /*function checkvalidation()
+            {
+              console.log("hhhhhhhhhh_______________hhhhhhhhhh");
+               $(document).ready(function() {*/
+       /*toastr.options = {
+                      "closeButton": false,
+                      "debug": false,
+                      "",
+                      "onclick": null,
+                      "showDuration": "300",
+                      "hideDuration": "1000",
+                      "timeOut": "5000",
+                      "extendedTimeOut": "1000",
+                      "showEasing": "swing",
+                      "hideEasing": "linear",
+                      "showMethod": "fadeIn",
+                      "hideMethod": "fadeOut"
+                      
+                      
+                  }*/
+     /* console.log("document.ready");
+      toastr.info('document.ready');});
+      $(window).load(function() {
+      console.log("window.load");
+      toastr.info('window.load');});
+            }*/
+            </script>
+       </div>
+      <div class="w-110 h-1 bg-[rgb(255,255,255)] flex justify-center">
+        <div id="passworderror",class="w-100 h-13 bg-red-600 text-xs/12	">
+        </div>
+      </div>
+      <div class="field w-110 h-26 bg-[rgb(255,255,255)] mt-1 ">
+        <div class="bg-[rgb(255,255,255)] flex justify-center">
+          <!--%= f.text_field :sur_name,placeholder:"sur Name", autofocus: true, autocomplete: "sur_name",class:"w-50 h-9 border border-[rgb(215,218,222)] rounded-md pl-3" %-->
+           <!--%= f.label :password_confirmation %--><!--br /-->
+           <!--%= f.password_field :password_confirmation, autocomplete: "new-password" %-->
+          <div class="w-103 h-12 bg-[rgb(255,255,255)] flex items-end">
+            <div class="w-103 h-10 bg-[rgb(255,255,255)] text-xs">
+             <div class="text-[rgb(119,119,119)]">
+                People who use our service may have uploaded your contact information to
+              </div>
+              <div class="text-[rgb(56,117,195)] flex w-30 bg-[rgb(255,255,255)] justify-around">
+                <div>
+                  Facebook.
+                </div>
+                <div>
+                  Learn more.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="h-10 bg-[rgb(255,255,255)] ">
+          <div class="h-10 bg-[rgb(255,255,255)] flex justify-center">
+           <div class="w-103 bg-[rgb(255,255,255)] flex items-end">
+            <div class="w-103 h-9 bg-[rgb(255,255,255)]">
+             <div class="text-xs flex justify-between">
+               <div class="w-56 text-[rgb(119,119,119)]">By clicking Sign Up, you agree to our</div> <div class="bg-[rgb(255,255,255)] w-60 flex justify-between"><div class="text-[rgb(56,117,195)] ">Terms,</div><div class="text-[rgb(56,117,195)] "> Privacy</div><div class="text-[rgb(56,117,195)] "> Policy</div> <div class=""> and</div><div class="text-[rgb(56,117,195)] "> Cookies</div> <div class="text-[rgb(56,117,195)] ">Policy.</div></div>
+             </div>
+             <div class="text-xs text-[rgb(119,119,119)]">
+              You may receive SMS notifications from us and can opt out at any time.
+             </div>
+            </div>
+           </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="actions h-20 flex items-center justify-center">
+        <div class="bg-[rgb(255,255,255)] h-14 w-58" >
+          <button onclick="checkvalidation()"class="w-58 h-10 bg-[rgb(17,159,22)] rounded-md">
+            <%= f.submit "Sign up" ,onclick:"checkvalidation()",class:"text-xl font-[700] bg-[rgb(17,159,22)] text-[rgb(234,236,239)]"%>
+          </button>
+        </div>
+        <script>
+          function checkvalidation()
+          {
+            console.log("hhhhhhhhhh_______________hhhhhhhhhh");
+            let name=document.getElementById("first_namefield").value;
+             
+              console.log("_________________________",name);
+              console.log(name.length);
+             /* $(document).ready(function() {*/
+      /* toastr.options = {
+                      "closeButton": false,
+                      "debug": false,
+                      "",
+                      "onclick": null,
+                      "showDuration": "300",
+                      "hideDuration": "1000",
+                      "timeOut": "5000",
+                      "extendedTimeOut": "1000",
+                      "showEasing": "swing",
+                      "hideEasing": "linear",
+                      "showMethod": "fadeIn",
+                      "hideMethod": "fadeOut"
+                      
+                      
+                  }*/
+                  /*console.log("document.ready");
+                  toastr.info('be ready for task');});
+                  $(window).load(function() {
+                  console.log("window.load");
+                  toastr.info('window.load');});
+                  console.log(document.getElementById("surnamecheck"));*/
+                  console.log(document.getElementById("surnamecheck").value);
+                  let surname_check=document.getElementById("surnamecheck").value;
+                  if(surname_check.length<3)
+                  {
+                   $(document).ready(function() {
+                  toastr.options = {
+                      "closeButton": false,
+                      "debug": false,
+                      
+                      
+                      
+                  }
+                  console.log("document.ready");
+                  toastr.info('minimum length is 3 required of sur name');});
+                  /*$(window).load(function() {
+                  console.log("window.load");
+                  toastr.info('window.load');}*);*/ 
+                  }
+              if(name.length<3)
+              { 
+                
+                console.log("hhhh____")
+                  $(document).ready(function() {
+                  toastr.options = {
+                      "closeButton": false,
+                      "debug": false,
+                      
+                      
+                      
+                  }
+                  console.log("document.ready");
+                  toastr.info('minimum length is 3 required of input name');});
+                  $(window).load(function() {
+                  console.log("window.load");
+                  toastr.info('window.load');});
+                  }
+                  else
+                  {
+                  document.getElementById("errorfirstnamediv").innerText=""
+                  }
+                }
+        </script>
+      </div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+  <div class="w-full h-65 bg-[rgb(240,242,255)] flex justify-center items-center mt-13">
+    <div class="w-full h-60 bg-[rgb(255,255,255)] flex justify-center items-end">
+      <div class="w-300 h-40 bg-[rgb(255,255,255)]">
+          <div class="w-60 bg-[rgb(255,255,255)] flex">
+            <div class="w-50 bg-[rgb(255,255,255)] text-xs">
+              English (UK)
+            </div>
+            <div class="w-8 h-6 bg-[rgb(235,237,240)] flex items-center justify-center">
+             <div class="w-4 h-4> 
+                <?xml version="1.0 ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 50 50" height="17px" ,class="bg-[rgb(235,237,240)]" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="17px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="50" width="50"/><line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="4" x1="9" x2="41" y1="25" y2="25"/><line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="4" x1="25" x2="25" y1="9" y2="41"/></svg>
+             </div>
+            </div>
+            
+          </div>
+          <div class="w-full h-5 bg-[rgb(255,255,255)] flex items-center">
+            <div class="w-260 h-2 "> 
+                <hr class="w-260 h-0.5 text-[rgb(245,246,247)] bg-gray-200"/>
+            </div>
+          </div>
+          <div class="text-xs w-230 h-5 bg-[rgb(255,255,255)] flex justify-between text-xs text-[rgb(56,58,179)]">
+            <div>
+              <a href="http://127.0.0.1:3000/users/sign_up">Sign Up</a> 
+            </div>
+            <div>
+              <%= link_to "Log in", new_session_path(resource_name),class:"text-xs text-[rgb(56,58,179)]" %>
+            </div>
+            <div class="">
+              Messenger
+            </div>
+            <div>
+              Facebook Lite
+            </div>
+            <div>
+              Video
+            </div>
+            <div>
+              Meta Pay
+            </div>
+            <div>
+              Meta Store
+            </div>
+            <div>
+              Meta Quest
+            </div>
+            <div>
+              Ray-Ban Meta
+            </div>
+            <div>
+              Meta AI
+            </div>
+            <div>
+              Instagram
+            </div>
+            <div>
+              Threads
+            </div>
+          </div>
+          <div class="text-xs w-250 bg-[rgb(255,255,255)] h-5 flex justify-between mt-2 text-[rgb(56,58,179)]">
+            <div>
+               Voting
+            </div>
+            <div>
+              Information Centre
+            </div>
+            <div>
+             Privacy Policy
+            </div>
+            <div>
+              Privacy Centre
+            </div>
+            <div>
+              About
+            </div>
+            <div>
+              Create ad
+            </div>
+            <div>
+              Create Page
+              
+            </div>
+            <div>
+              Developers
+            </div>
+            <div>
+              Careers
+            </div>
+            <div>
+              Cookies
+            </div>
+            <div>
+              AdChoices
+            </div>
+            <div>
+             Terms
+            </div>
+            <div>
+              Help
+            </div>
+            
+
+          </div>
+          <div class="flex justify-between w-55 h-4 bg-[rgb(255,255,255)] text-xs mt-1 text-[rgb(56,58,179)]">
+           <div>
+            Contact
+           </div>
+           <div>
+             uploading
+           </div>
+           <div>
+             and
+            </div>
+            <div>
+               non-usersSettings
+            </div>
+          </div>
+          <div class="w-17 text-[rgb(115,115,115)] flex justify-between h-5 bg-[rgb(255,255,255)] mt-6 text-xs">
+            <div>
+              Meta
+            </div>
+            <div>
+               © 
+            </div>
+            <div>
+              2025
+            </div>
+
+          </div>
+      </div>
+
+    </div>
+    <!--div class="w-300 h-5 bg-[rgb(55,55,55)]">
+
+    </div-->
+  </div>
+</div>
+ <!--%= render 'devise/shared/error_messages', resource: resource %-->
+
+</body>
+<!--https://www.facebook.com/help/637205020878504/?helpref=uf_share-->

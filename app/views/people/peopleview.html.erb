@@ -1,0 +1,94 @@
+
+<div style="display:inline-block "class="w-285  bg-[rgb(242,244,247)]">
+  <div style="grid-template-columns: auto auto auto auto auto; display: grid;  ;padding: 10px;" class="bg-[rgb(242,244,247)]">
+    <% @users.each do |user| %>
+    <div style="" class="w-55 h-100 mt-2 text-sm bg-[rgb(255,255,255)] rounded-md">
+      <div class="  rounded-t-lg  bg-[rgb(255,255,255)] flex items-center">
+        <div class="w-55 h-60"> 
+          <img  class="rounded-t-lg  h-60 w-55"src="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" srcset="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=150 150w, https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=300 300w, https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400 400w, https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600 600w, https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w, https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600 1600w" sizes="(max-width: 650px) calc((100vw - 42px) / 2), (max-width: 900px) calc((100vw - 52px) / 2), (max-width: 1440px) calc((100vw - 108px) / 3), (max-width: 1600px) calc((100vw - 108px) / 3), calc((1600px - 108px) / 3)" alt="Free A stylish man with a backpack boards a tram in bustling Budapest, Hungary, during the day. Stock Photo" class="spacing_noMargin__F5u9R">
+        </div>
+      </div>
+      <div class="text-lg font-[500] pl-3">
+        <div>        
+          <%= user.email %>
+        </div>
+      </div>
+      <div class="w-55 h-32 bg-[rgb(255,255,255)] flex items-end">
+        <div class="w-55 bg-[rgb(255,255,255)] h-20 flex flex-col justify-around items-center">
+          <div class="w-50 h-8">
+            <button class="w-50 text-base h-8 bg-[rgb(240,241,243)] rounded-md font-[600] text-blue-600" onclick="RequestSent(`<%= user.email %>`,<%=user.id%>)">Add friend</button>
+          </div>
+          <div class="w-50 h-8">
+            <button class="w-50 h-8 text-base bg-[rgb(214,217,221)] font-[600]  rounded-md">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<!--/div-->
+ <!--% if current_user.friends.where(req_status:"accept").present? %-->
+      <!--%current_user.friends.friend_email%-->
+      <!--div class="w-20 h-5 bg-blue-600"-->
+        <!--%current_user.friends.friend_email%-->
+      <!--/div-->
+    <!--%end%-->
+
+  <!--% if current_user.friends.where(req_status:"accept").present? %-->
+    <!--%=current_user.friends.where(req_status:"accept").count%-->
+    <!--div class="w-210 h-70 bg-blue-600"-->
+      <!--% current_user.friends.each do |comments| %-->
+        <!--% if comments.req_status == 'accept' %-->
+          <!--%=comments.friend_email%-->
+       <!--% end %-->
+      <!--% end %-->
+    <!--/div-->
+    <!--%=current_user.friends.friend_email%-->
+  <!--% end %-->
+<!--/div-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  function Friendrequestdeclined(friendemail)
+  {
+   data={userid:`<%=current_user.id%>`,currentuseremail:friendemail,user_id:`<%=current_user.id%>`,reqstatus:"declined"}
+    axios.post('/friendrequestsent/friendrequestdelete',data)
+ .then((response) => {
+  if(response.status==200)
+   { window.location.reload();
+   
+   } 
+  }).catch(error => console.log(error.response.data));
+
+  }
+  function Friendrequestaccepted(friendemail)
+  { data={userid:`<%=current_user.id%>`,currentuseremail:friendemail,user_id:`<%=current_user.id%>`,reqstatus:"accept"}
+    axios.post('/friendrequestsent/friendrequestaccept',data)
+ .then((response) => {
+  if(response.status==200)
+   { window.location.reload();
+   
+   }
+
+//   console.log("")
+ })
+ .catch(error => console.log(error.response.data));
+
+  }
+  function RequestSent(email,id)
+  {console.log("function request sent",email,"::::::::::",id);
+ data={emails:email,userid:id,currentuseremail:`<%=current_user.email%>`,user_id:id,reqstatus:"pending"}
+   axios.post('/friendrequestsent/friendrequestget',data)
+ .then((response) => {
+  if(response.status==200)
+   { window.location.reload();
+   
+   }
+
+//   console.log("")
+ })
+ .catch(error => console.log(error.response.data));
+  }
+</script>
+<!--useremail:--><!--%=current_user.email%--><!------------userid:<!-%=current_user.id%>,friendemail:email,friendid:id--->

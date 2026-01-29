@@ -1,0 +1,2 @@
+module FriendshowHelper
+end

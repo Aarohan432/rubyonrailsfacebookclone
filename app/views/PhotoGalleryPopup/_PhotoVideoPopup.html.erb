@@ -1,0 +1,402 @@
+<head>
+<style>
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  
+  animation-name: fadeIn;
+  
+}
+
+/* Modal Content */
+/*.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}*/
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0.5} 
+  to {bottom: 0.5; opacity: 0.5}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0.5}
+  to {bottom: 0.5; opacity: 0.5}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0.5} 
+  to {opacity: 0.5}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0.5} 
+  to {opacity: 0.5}
+}
+</style>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<div  id="Postdiv"  style="display:none"class="fixed inset-0 bg-gray-500/75 bg-opacity-90 transition-opacity" aria-hidden="true">
+  <div class="fixed mt-12 ml-150  inset-0 z-10 w-screen overflow-y-auto">
+    <div class="w-120 h-150 bg-white " >
+      <div class="w-120 h-12 bg-white flex items-center justify-end">
+        <div class="w-100 flex h-12">    
+          <div class="w-70 h-12 bg-white flex  justify-center">
+            <div class="text-xl h-7 font-[700] mt-2">
+              Create post
+            </div>
+          </div>
+          <div class="w-30 h-12 flex justify-end">
+            <div class="w-20 h-12 bg-white flex items-center justify-center">
+              <div onclick="Postdiv()"class="w-9 h-9 bg-[rgb(197,200,205)] rounded-full flex items-center justify-center cursor-pointer">
+                <div class="w-5 h-5">
+                  <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 text-[rgb(91,98,106)]" aria-hidden="true" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v4/yf/r/N1cx5zPsD4a.png&quot;); background-position: 0px -377px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-120 h-2 flex items-center justify-center">
+        <div class="w-120 h-1">
+            <hr class="border-none h-0.5 bg-[rgb(225,227,230)]" style="">
+        </div>
+      </div>
+      <div class="w-120 h-16 bg-white">
+        <div class="w-60 h-16 bg-white">
+          <div>
+            <div class="ml-3">  
+              <div class="flex justify-between w-42">
+                <div class="w-11 h-16 flex items-center">
+                  <div class="w-11 h-11">
+                    <img style="border-radius: 50%; width:95%; height:2.5rem; display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms; " src="https://scontent.fixc1-7.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s40x40&amp;_nc_cat=1&amp;ccb=1-7&amp;_nc_sid=136b72&amp;_nc_ohc=pCF_EXqQ5MYQ7kNvwG7Cxx3&amp;_nc_oc=AdlvdL4ylVJcHduxNc1-TLERJYPh9OYcoR30dDXFu9qCjsvStonFUieEjLhSGUIibwKBL8oSFVNRk0D43B-W-V00&amp;_nc_zt=24&amp;_nc_ht=scontent.fixc1-7.fna&amp;oh=00_AfFDUtwaoBwav8tHKYBUDPdSgJLE3By2LZP8-Xl2Pzy3Lg&amp;oe=681C00BA">
+                            
+                  </div>
+                </div>
+                <div class="flex  justify-center">
+                  <div class="h-12 mt-1">
+                    <div class="font-[600]">
+                      Aarohan Phirani
+                    </div>
+                    <div>
+                      <div class="flex justify-around w-24 h-6 bg-[rgb(226,229,233)] rounded-md">
+                        <div class="flex items-center justify-center">                                    
+                          <div class="w-4 h-3">
+                            <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://static.xx.fbcdn.net/rsrc.php/v4/yJ/r/zPcex_q0TM1.png">
+                          </div>
+                        </div>
+                        <div class="text-black flex items-center justify-center font-[600] text-xs">
+                          <div class="w-10 h-4">
+                            Friends
+                          </div>
+                        </div>
+                        <div class="flex items-center ">
+                          <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v4/yD/r/15ejYQudOXa.png&quot;); background-position: 0px -466px; background-size: auto; width: 12px; height: 12px; background-repeat: no-repeat; display: inline-block;"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <div class="w-115 h-13 bg-white flex  justify-center">
+          <div class="w-115 h-7 bg-white flex justify-between">
+            <div class="w-107 h-7 bg-white flex justify-center">
+                <div class="w-107 text-base text-[rgb(132,135,138)]">
+                   <!------<input id="Postinput" class="w-107 outline-none" placeholder="What's on your mind , <!-%=current_user.email%->"-> <!-input/->
+                </div>
+                <div>
+                    <!-%=form.label :image, style: "display: block" %-->
+                    <!--%= form.file_field :image %-->
+                   <%= form_with model: @post do |form| %>
+                  <div>
+                  
+                  <!--%= form.label :title %-->
+                  <%= form.text_field :title ,class:"cursor-pointer w-70 text-base  outline-none text-[rgb(104,107,111)]",placeholder:"Whats on your mind Aarohan?",:required => 'required' %>
+                  </div>
+                  <div>
+                  </div>
+                  
+                 
+                </div>
+            </div>
+            <div>
+                <i data-visualcompletion="css-img" class="x1b0d499 xl1xv1r" aria-label="Emoji" role="img" style="height: 27px; width: 27px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v4/y3/r/yh2GyyFZjoY.png&quot;); background-position: 0px 0px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-118 h-79 bg-white flex items-center justify-center ">
+        <div class="w-115 h-75 bg-white flex items-center justify-center rounded-md border border-[rgb(226,229,233)]">
+          <div class="w-111 h-71 bg-white flex flex-col items-between">
+            <div class="w-111 bg-[rgb(248,249,251)] h-50 rounded-md flex flex-col items-center justify-center">
+              <div class="w-111 h-10 bg-[rgb(248,249,251)] flex justify-center">
+                <div class="w-9 h-9 cursor-pointer bg-[rgb(226,229,233)] rounded-full flex items-center justify-center">
+                  <div class="w-5 h-5">
+                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk" aria-hidden="true" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v4/yC/r/lB9UhEgT3HX.png&quot;); background-position: -25px -108px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="w-111 h-8 bg-[rgb(248,249,251)] flex justify-center">
+                <div class="text-lg font-[500]">
+                  <%= form.file_field :image ,placeholder: "placeholder text",class:"w-50"%>
+                </div>
+              </div>
+            </div>
+            <div class="w-110 h-17 flex bg-[rgb(248,249,251)] mt-5">
+              <div class="w-15 h-17 flex items-center justify-center">
+                <div onclick="Postdiv()"class="w-9 h-9 bg-[rgb(226,229,233)] rounded-full flex items-center justify-center">
+                  <div class="w-5 h-5">
+                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk" aria-hidden="true" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v4/yD/r/s2eqO-__kay.png&quot;); background-position: 0px -716px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="text-xs flex items-center justify-end">
+                <div class="h-6 flex items-center ">
+                  <div class="h-4">
+                    Add photos and videos from your mobile device.
+                  </div>
+                </div>
+              </div>
+              <div class="w-28 ml-0 flex items-center justify-end">
+                <div>
+                  <button class="bg-[rgb(214,217,221)] w-13 h-9 rounded-md font-[600]">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="w-120 bg-white flex justify-center">
+        <div class="rounded-md w-115 h-14 flex bg-[rgb(255,255,255)] border border-[rgb(226,229,233)] flex justify-between">
+          <div class="text-sm w-35 flex items-center justify-end">
+            <div class="h-7 font-[600] text-base">
+              Add to your post
+            </div>
+          </div>
+          <div class="w-90 bg-white flex justify-end">
+            <div class="w-70 flex bg-white">
+              <div class="w-12 bg-white flex items-center justify-center">
+                <div class="w-5 h-5 ">
+                  <img class="x1b0d499 xl1xv1r" alt="" src="https://static.xx.fbcdn.net/rsrc.php/v4/y7/r/Ivw7nhRtXyo.png" style="height: 24px; width: 24px;">
+                </div>
+              </div>
+              <div class="w-12 bg-white flex items-center justify-center">
+                <div class="w-5 h-5 ">
+                  <img class="x1b0d499 xl1xv1r" alt="" src="https://static.xx.fbcdn.net/rsrc.php/v4/yq/r/b37mHA1PjfK.png" style="height: 24px; width: 24px;">
+                </div>
+              </div>
+              <div class="w-12 bg-white flex items-center justify-center">
+                <div class="w-5 h-5 ">
+                  <img class="x1b0d499 xl1xv1r" alt="" src="https://static.xx.fbcdn.net/rsrc.php/v4/yd/r/Y4mYLVOhTwq.png" style="height: 24px; width: 24px;">
+                </div>
+              </div>
+              <div class="w-12 bg-white flex items-center justify-center">
+                <div class="w-5 h-5 ">
+                  <img class="x1b0d499 xl1xv1r" alt="" src="https://static.xx.fbcdn.net/rsrc.php/v4/y1/r/8zlaieBcZ72.png" style="height: 24px; width: 24px;">
+                </div>
+              </div>
+              <div class="w-12 bg-white flex items-center justify-center">
+                <div class="w-5 h-5 ">
+                  <img class="x1b0d499 xl1xv1r" alt="" src="https://static.xx.fbcdn.net/rsrc.php/v4/yT/r/q7MiRkL7MLC.png" style="height: 24px; width: 24px;">
+                </div>
+              </div>
+              <div class="w-12 h-13 flex items-center justify-center ">
+                <div class="w-8 h-8 rounded-full hover:bg-[rgb(214,217,221)] flex items-center justify-center">
+                  <div class="w-6 h-5">    
+                    <i data-visualcompletion="css-img" class="x1b0d499 xl1xv1r" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v4/yC/r/lB9UhEgT3HX.png&quot;); background-position: -50px -83px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-110 ml-5 h-10 bg-white flex items-center justify-center">
+        <div class="cursor-pointer w-110 h-9 bg-white text-[rgb(194,198,202)]">
+            <!--button onclick="comment()"class="w-110 h-9 bg-[rgb(226,229,233)] text-[rgb(189,193,197)] rounded-md font-[600]">Post</button-->
+            <button class="cursor-pointer w-110 rounded-md h-8 bg-[rgb(226,229,233)] mt-3"><%= form.submit placeholder:"Post",class:"cursor-pointer w-110 h-8 font-[600] bg-[rgb(226,229,233)]  rounded-md", value:"Post"%></button>
+        </div>
+      </div>
+      <!--%= form.file_field :avatar %-->
+
+    </div>
+  </div>
+</div>
+
+ <% end %>
+<!--div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true"-->
+  <!--
+    Background backdrop, show/hide based on modal state.
+
+    Entering: "ease-out duration-300"
+      From: "opacity-0"
+      To: "opacity-100"
+    Leaving: "ease-in duration-200"
+      From: "opacity-100"
+      To: "opacity-0"
+  -->
+  <!--div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
+
+  <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+    <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"-->
+      <!--
+        Modal panel, show/hide based on modal state.
+
+        Entering: "ease-out duration-300"
+          From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          To: "opacity-100 translate-y-0 sm:scale-100"
+        Leaving: "ease-in duration-200"
+          From: "opacity-100 translate-y-0 sm:scale-100"
+          To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      -->
+      <!--div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <div class="sm:flex sm:items-start">
+            <div class="mx-auto flex size-12 shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:size-10">
+              <svg class="size-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+              </svg>
+            </div>
+            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+              <h3 class="text-base font-semibold text-gray-900" id="modal-title">Deactivate account</h3>
+              <div class="mt-2">
+                <p class="text-sm text-gray-500">Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+          <button type="button" class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 sm:ml-3 sm:w-auto">Deactivate</button>
+          <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancel</button>
+        </div>
+      </div>
+    </div-->
+  <!--/div>
+</div-->
+
+  <!--
+    Background backdrop, show/hide based on modal state.
+
+    Entering: "ease-out duration-300"
+      From: "opacity-0"
+      To: "opacity-100"
+    Leaving: "ease-in duration-200"
+      From: "opacity-100"
+      To: "opacity-0"
+  -->
+ 
+<script>
+    function deactivate()
+    {   let testdiv=document.getElementById("divtesting");
+        console.log(testdiv);
+        testdiv.style.display="none";
+        console.log("deactiavte function runs");
+    }
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script>
+   function comment()
+
+  { const Poststorevariable=document.getElementById("Postinput").value;
+  console.log(Poststorevariable,"comment function run");
+   data={Poststore:Poststorevariable}
+   axios.post('/post/post',data)
+  .then((response) => {
+    if(response.status==200)
+    { window.location.reload();}
+}).catch(error => console.log(error.response.data));
+  }
+    function Postdiv()
+    {
+        console.log("Post div");
+        const Postshowdiv=document.getElementById("Postdiv");
+        
+            Postshowdiv.style.display="none";
+        
+    }
+    function showpostdiv()
+    {const showpostdiv=document.getElementById("Postdiv");
+     if(showpostdiv.style.display=="none")
+     {
+       showpostdiv.style.display="block"; 
+     }
+
+    }
+</script>

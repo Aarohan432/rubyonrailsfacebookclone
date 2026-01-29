@@ -1,0 +1,2 @@
+module VideopageHelper
+end

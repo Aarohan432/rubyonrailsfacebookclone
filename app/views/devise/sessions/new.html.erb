@@ -1,0 +1,354 @@
+
+
+
+<head>
+  
+</head>
+  <body class="bg-[rgb(242,244,247)]">
+    <%= render 'layouts/error_messages', object: resource %>
+          
+     
+     <%= render "devise/shared/error_messages", resource: resource %>
+      <!--div class="w-20 h-20 bg-yellow-600"><!-/div-->
+<!--div class="password-field">
+<input type="password" id="fakePassword" placeholder="Enter Password" />
+<span><i id="toggler"class="far fa-eye"></i></span>
+</div-->
+     <!--div class="user-box">
+        <input type="password" name="" id="password" required="" />
+        <label>Password</label>
+        <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+      </div-->
+<div>
+<div class="flex justify-around w-340 mt-30">
+  <div class="w-200 bg-[rgb(242,244,247)]">
+      <div class="w-200 h-40 bg-[rgb(242,244,247)] flex items-end">
+        <div class="w-136 bg-[rgb(242,244,247)] h-16 font-[700] flex justify-end">
+          <div class="w-65">
+            <h1 class="text-6xl text-[rgb(8,102,255)]">facebook</h1>
+          </div>
+        </div>
+      </div>
+      <div class="w-200 h-20 bg-[rgb(242,244,247)] flex justify-end">
+        <div class="w-129 text-3xl h-20 bg-[rgb(242,244,247)]">
+          Facebook helps you connect and share 
+          with the people in your life.
+        </div>
+      </div>
+   
+  </div>
+  <br/>
+  <div style="", class="w-100 h-auto bg-[rgb(255,255,255)] flex justify-center rounded-lg shadow-2xl relative",style="box-shadow: 15px 15px 15px red;">
+   <div class="w-80 flex justify-center ">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        
+       <% if resource.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% resource.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+     
+      <div class="w-110 flex justify-center mt-5 ">
+        <div class="field w-90 h-13">
+         <!--%= f.label :email %-->
+         <%= f.email_field :email,oninput:"validatemail()", autofocus: true, placeholder:"Email Address or phone number",autocomplete: "email",class:"text-lg pl-3 border-2 border-[rgb(237,238,240)] w-90 h-13  focus:outline-sky-500",id:"email" %>
+         <% if resource.errors[:email].any? %>
+        <div class="invalid-feedback"><%= resource.errors[:email].join(', ') %></div>
+        <% end %>
+         <div id="emailError" class="text-xs text-red-600"> </div>
+         <script>
+          function validatemail()
+          {var email = document.getElementById("email").value;
+          console.log(email);
+          console.log("kkkkkkk")
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                document.getElementById("emailError").innerText = "Sorry, this email address is not valid. Please try again.";
+            } else {
+                document.getElementById("emailError").innerText = "";
+            }
+          }
+          
+        
+         </script>
+       </div>
+      
+      </div>
+
+      <div class="field w-110 h-25 flex justify-center relative">
+         <!--div class="w-10 h-10 absolute mt-5 ml-5 cursor-auto"> 
+            <div class="absolute w-5 h-5">
+              <span class="absolute">
+                <i id="toggler"class="far fa-eye"></i>
+              </span>
+            </div>
+           
+         </div-->
+        <div class="w-90 h-23 mt-5 ">
+          <!--div class="absolute w-5 h-5  ">
+          <span class="absolute">
+            <i id="toggler"class="far fa-eye"></i>
+          </span>
+          </div-->
+        <!--%= f.label :password %-->
+        <!--div class="w-10 h-10 absolute"> 
+           <div class="absolute w-5 h-5">
+             <span class="absolute">
+               <i id="toggler"class="far fa-eye"></i>
+             </span>
+           </div>
+          </div-->
+           
+         <%= f.password_field :password,oninput:"validatePassword()",placeholder:"Password", autocomplete: "current-password",id:"temp",class:"text-lg pl-3 border-2 border-[rgb(237,238,240)] relative focus:outline-sky-500 w-90 h-13" %>
+         <div id="passwordError" class="text-black-600 text-sm text-red-600"></div>
+        <div class="w-10 h-10 absolute top-8 left-91"> 
+            <div class="absolute w-5 h-5 mt-1">
+              <span class="absolute">
+                <i id="toggler"class="far fa-eye"></i>
+              </span>
+            </div>
+           
+         </div>
+     
+        </div> 
+          <!--div ,id="eye",class="w-10 h-10 absolute bg-pink-600 mt-10 ml-40",onclick="eyeicon()", >   
+  <svg width="30%" ,onclick="eyeicon()" ,id="",height="30%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div-->     
+      </div>
+      <!--script>
+      
+            
+
+  var password = document.getElementById('temp');
+var toggler = document.getElementById('toggler');
+showHidePassword = () => {
+  console.log("hhhhhhhhh")
+if (password.type == 'password') {
+password.setAttribute('type', 'text');
+toggler.classList.remove('fa-eye-slash');
+} else {
+
+toggler.classList.add('fa-eye-slash');
+password.setAttribute('type', 'password');
+}
+};
+
+toggler.addEventListener('click', showHidePassword);
+  function eyeicon(){ 
+    console.log("aaaaaaaaaaaaaaaa")
+    let a=document.getElementById("eyeicon");
+     console.log(a)
+
+  }
+          
+      </script-->
+
+     <% if devise_mapping.rememberable? %>
+       <!--div class="field">
+       <!-%= f.check_box :remember_me %->
+       <!-%= f.label :remember_me %->
+       </div-->
+     <% end %>
+
+     <div class="actions w-110 h-12 flex justify-center">
+       <button class="w-90 bg-[rgb(8,102,255)] mt-1 h-12 rounded-lg text-white"><%= f.submit "Log in",class:"text-2xl font-semibold" %></button>
+     </div>
+     <div class="w-95 h-auto bg-[rgb(255,255,255)] mt-6 ml-8">
+         <!--%= render "devise/shared/links" %-->
+         <div class="flex justify-center">  
+  <div class="w-40">
+    <%= link_to "Forgotten password?", new_password_path(resource_name),class:"text-[rgb(8,102,255)]" %><br />
+  </div>
+</div>
+         <div class="w-95 h-2 bg-[rgb(255,255,255)] mt-5">
+          <hr class="w-95 text-gray-400"/>
+         </div> 
+         <div class="w-98 h-14 flex justify-center items-center mt-2 mb-4">
+          <div class="w-53 h-14 bg-[rgb(255,255,255)]">
+            <button class="w-53 h-13 bg-[#36A420] rounded-lg text-base font-bold text-white">
+              <%= link_to "Create a new account", new_registration_path(resource_name) %>
+            </button>
+          </div>
+         </div> 
+           <!--div class="absolute w-5 h-5">
+          <span class="absolute">
+            <i id="toggler"class="far fa-eye"></i>
+          </span>
+          </div-->
+          <div>
+            <!--%= resource.errors.inspect %-->
+          </div>
+     </div>
+        
+    
+<%= render "devise/shared/error_messages", resource: resource %>
+ 
+<% end %>
+
+
+
+
+
+     
+   </div>
+ </div>
+
+      <!--script>
+
+  var password = document.getElementById('temp');
+var toggler = document.getElementById('toggler');
+showHidePassword = () => {
+  console.log("hhhhhhhhh")
+if (password.type == 'password') {
+password.setAttribute('type', 'text');
+toggler.classList.remove('fa-eye-slash');
+} else {
+
+toggler.classList.add('fa-eye-slash');
+password.setAttribute('type', 'password');
+}
+};
+
+toggler.addEventListener('click', showHidePassword);
+  function eyeicon(){ 
+    console.log("aaaaaaaaaaaaaaaa")
+    let a=document.getElementById("eyeicon");
+     console.log(a)
+
+  }</script-->
+  <!--div class=" w-5 h-5">
+          <span class="absolute" style="top:45%">
+            <i id="toggler"class="far fa-eye"></i>
+          </span>
+          </div-->
+</div>
+<div class="w-340 h-13 bg-[rgb(242,244,247)] flex justify-end mt-2">
+  <div class="w-120 h-13 bg-[rgb(242,244,247)] flex justify-center items-center">
+    <div class="h-8 w-100 flex justify-center">
+    <div class="flex justify-between w-86 ">
+      <div class="font-bold">
+     Create a Page
+      </div>
+      <div>
+      for a celebrity, brand or business.
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+<div class="w-40 h-32 ">
+
+
+<!--%= render "devise/shared/links" %-->
+</div>
+<script>
+  function validatePassword() {
+            console.log("k lwk ");
+
+            var password = document.getElementById("temp").value;
+            console.log(password);
+            // console.log(password.length);
+            
+            var lengthRegex = /^.{8,}$/;
+            const regex1 = /^(?=.*[a-zA-Z]).+$/;
+            var regex = /^(?=.*[0-9]).+$/;
+            var letterRegex = /[a-zA-Z]/;
+            var c = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
+
+            if (password === "") {
+                document.getElementById("passwordError").innerText = "Password cannot be empty.";
+                console.log("q");
+            }
+            else if (password.length < 8) {
+                document.getElementById("passwordError").innerText = "password length is greater than 8";
+            }
+            else if (!regex1.test(password)) {
+                document.getElementById("passwordError").innerText = "password contain uppercase and one lowercase characters"
+            }
+
+            else if (!regex.test(password)) {
+                console.log(regex.test(password));
+                console.log(password);
+                console.log("p");
+                document.getElementById("passwordError").innerText = "Password must contain numbers";
+            }
+
+            else if (password.length < 8) {
+                document.getElementById("passwordError").innerText = "password length is greater than 8";
+            }
+            else {
+                console.log(":jnc")
+                document.getElementById("passwordError").innerText = "";
+            }
+
+            
+        }
+ function validateEmail() {
+            var email = document.getElementById("email").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                document.getElementById("emailError").innerText = "Sorry, this email address is not valid. Please try again.";
+            } else {
+                document.getElementById("emailError").innerText = "";
+            }
+        }
+  var password = document.getElementById('temp');
+var toggler = document.getElementById('toggler');
+showHidePassword = () => {
+  console.log("hhhhhhhhh")
+if (password.type == 'password') {
+  console.log("hlo guys")
+password.setAttribute('type', 'text');
+toggler.classList.remove('fa-eye-slash');
+} else {
+console.log(".")
+toggler.classList.add('fa-eye-slash');
+password.setAttribute('type', 'password');
+}
+};
+
+toggler.addEventListener('click', showHidePassword);
+  function eyeicon(){ 
+    console.log("aaaaaaaaaaaaaaaa")
+    let a=document.getElementById("eyeicon");
+     console.log(a)
+
+  }
+  /*
+  function myFunction() {
+    console.log("hhhhhhhhhhh")
+     const a=document.getElementById("eye");
+     console.log(a)
+    //a.style.display="none";
+  var x = document.getElementById("");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+   
+  }
+}*/
+</script>
+ <% if resource.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
+      <% resource.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+</body>

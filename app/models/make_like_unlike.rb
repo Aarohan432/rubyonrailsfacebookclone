@@ -1,0 +1,2 @@
+class MakeLikeUnlike < ApplicationRecord
+end

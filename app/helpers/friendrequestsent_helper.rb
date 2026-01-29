@@ -1,0 +1,2 @@
+module FriendrequestsentHelper
+end
